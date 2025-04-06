@@ -16,7 +16,8 @@
   <body>
     <div class="wrapper">
       <div class="title">
-        <h1><a href="https://amirtyuniversity.netlify.app/" target="_blank">Amirty University</a></h1>
+        <h1><a href="https://www.kletech.ac.in/" target="_blank">KLE Technological University</a></h1>
+
         <div class="subtitle">
           <i class="fas fa-user-graduate"></i>
           <h2>Student Registration Form</h2>
@@ -24,11 +25,12 @@
       </div>
       
       <form
-        method="POST"
-        action="#"
-        data-netlify="true"
-        name="student-registration-form"
-      >
+  id="registration-form"
+  method="POST"
+  action="#"
+  name="student-registration-form"
+>
+
         <div class="form">
           <div class="form-section">
             <h2>Personal Information</h2>
@@ -404,5 +406,18 @@
         </div>
       </form>
     </div>
+    <script>
+      document.getElementById("registration-form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop the form from submitting
+    
+        // Show success alert
+        alert("Successfully registered!");
+    
+        // Optionally clear the form
+        this.reset();
+      });
+    </script>
+    
+
   </body>
 </html>
